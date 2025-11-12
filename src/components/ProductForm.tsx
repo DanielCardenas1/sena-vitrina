@@ -36,8 +36,8 @@ export function ProductForm({ product, centers, categories }: ProductFormProps) 
     try {
       const imagesArray = formData.images
         .split('\n')
-        .map((url) => url.trim())
-        .filter((url) => url)
+        .map((url: string) => url.trim())
+        .filter((url: string) => url)
 
       const body = {
         ...formData,
