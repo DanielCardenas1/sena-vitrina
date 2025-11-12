@@ -6,8 +6,13 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+enum ProductStatus {
+  DRAFT
+  PUBLISHED
 }
 
 model Region {
@@ -37,8 +42,7 @@ model Product {
   price       Int?          // Precio en COP (opcional)
   images      String        // JSON array de URLs
   category    String
-  // Usamos string en SQLite porque el conector sqlite no soporta enums nativos
-  status      String        @default("DRAFT")
+  status      ProductStatus @default(DRAFT)
   centerId    String
   center      Center        @relation(fields: [centerId], references: [id], onDelete: Cascade)
   requests    Request[]
