@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client'
+import { PrismaClient, ProductStatus } from '@prisma/client'
 
 const prisma = new PrismaClient()
 
@@ -86,7 +86,7 @@ async function main() {
         'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800',
       ]),
       category: categorias[0],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[0].id,
     },
     {
@@ -97,7 +97,7 @@ async function main() {
         'https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=800',
       ]),
       category: categorias[0],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[4].id,
     },
     {
@@ -109,7 +109,7 @@ async function main() {
         'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800',
       ]),
       category: categorias[2],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[1].id,
     },
     {
@@ -120,7 +120,7 @@ async function main() {
         'https://images.unsplash.com/photo-1617096200347-cb04ae810b1d?w=800',
       ]),
       category: categorias[3],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[3].id,
     },
     {
@@ -132,7 +132,7 @@ async function main() {
         'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800',
       ]),
       category: categorias[1],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[2].id,
     },
     {
@@ -143,7 +143,7 @@ async function main() {
         'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800',
       ]),
       category: categorias[1],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[2].id,
     },
     {
@@ -154,7 +154,7 @@ async function main() {
         'https://images.unsplash.com/photo-1599940824399-b87987ceb72a?w=800',
       ]),
       category: categorias[0],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[0].id,
     },
     {
@@ -165,7 +165,7 @@ async function main() {
         'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800',
       ]),
       category: categorias[2],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[1].id,
     },
     {
@@ -176,7 +176,7 @@ async function main() {
         'https://images.unsplash.com/photo-1580480055273-228ff5388ef8?w=800',
       ]),
       category: categorias[3],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[3].id,
     },
     {
@@ -187,7 +187,7 @@ async function main() {
         'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=800',
       ]),
       category: categorias[5],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[2].id,
     },
     {
@@ -198,7 +198,7 @@ async function main() {
         'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800',
       ]),
       category: categorias[0],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[0].id,
     },
     {
@@ -209,7 +209,7 @@ async function main() {
         'https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=800',
       ]),
       category: categorias[4],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[2].id,
     },
     {
@@ -220,7 +220,7 @@ async function main() {
         'https://images.unsplash.com/photo-1585909695284-32d2985ac9c0?w=800',
       ]),
       category: categorias[5],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[0].id,
     },
     {
@@ -231,7 +231,7 @@ async function main() {
         'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800',
       ]),
       category: categorias[2],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[1].id,
     },
     {
@@ -242,7 +242,7 @@ async function main() {
         'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800',
       ]),
       category: categorias[1],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[2].id,
     },
     {
@@ -253,7 +253,7 @@ async function main() {
         'https://images.unsplash.com/photo-1594620302200-9a762244a156?w=800',
       ]),
       category: categorias[3],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[3].id,
     },
     {
@@ -264,7 +264,7 @@ async function main() {
         'https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=800',
       ]),
       category: categorias[0],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[4].id,
     },
     {
@@ -275,7 +275,7 @@ async function main() {
         'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=800',
       ]),
       category: categorias[4],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[1].id,
     },
     {
@@ -286,7 +286,7 @@ async function main() {
         'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800',
       ]),
       category: categorias[5],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[3].id,
     },
     {
@@ -297,7 +297,7 @@ async function main() {
         'https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800',
       ]),
       category: categorias[0],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[4].id,
     },
     {
@@ -308,7 +308,7 @@ async function main() {
         'https://images.unsplash.com/photo-1604762342529-e86ae0d0ef98?w=800',
       ]),
       category: categorias[5],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[2].id,
     },
     {
@@ -319,7 +319,7 @@ async function main() {
         'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=800',
       ]),
       category: categorias[3],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[3].id,
     },
     {
@@ -330,7 +330,7 @@ async function main() {
         'https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=800',
       ]),
       category: categorias[0],
-      status: 'PUBLISHED',
+      status: 'PUBLISHED' as ProductStatus,
       centerId: centrosCreated[0].id,
     },
   ]
@@ -354,3 +354,4 @@ main()
     await prisma.$disconnect()
     process.exit(1)
   })
+
