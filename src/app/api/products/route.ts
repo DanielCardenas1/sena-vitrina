@@ -14,8 +14,8 @@ export async function GET(request: Request) {
         status: 'PUBLISHED',
         ...(q && {
           OR: [
-            { title: { contains: q, mode: 'insensitive' } },
-            { description: { contains: q, mode: 'insensitive' } },
+            { title: { contains: q } },
+            { description: { contains: q } },
           ],
         }),
         ...(category && { category }),
@@ -67,7 +67,7 @@ export async function POST(request: Request) {
         price: price ? parseInt(price) : null,
         images: typeof images === 'string' ? images : JSON.stringify(images),
         category,
-        status: status || 'DRAFT',
+        status: (status as 'DRAFT' | 'PUBLISHED') || 'DRAFT',
         centerId,
       },
       include: {

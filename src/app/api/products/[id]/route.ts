@@ -54,7 +54,7 @@ export async function PATCH(
         ...(price !== undefined && { price: price ? parseInt(price) : null }),
         ...(images && { images: typeof images === 'string' ? images : JSON.stringify(images) }),
         ...(category && { category }),
-        ...(status && { status }),
+        ...(status && { status: status as 'DRAFT' | 'PUBLISHED' }),
       },
       include: {
         center: {
