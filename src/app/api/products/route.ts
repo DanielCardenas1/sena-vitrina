@@ -1,5 +1,6 @@
 import { prisma } from '@/lib/prisma'
 import { NextResponse } from 'next/server'
+import { ProductStatus } from '@prisma/client'
 
 export const dynamic = 'force-dynamic'
 export const revalidate = 0
@@ -15,7 +16,7 @@ export async function GET(request: Request) {
 
     const products = await prisma.product.findMany({
       where: {
-        status: 'PUBLISHED',
+        status: ProductStatus.PUBLISHED,
         ...(q && {
           OR: [
             { title: { contains: q } },
@@ -71,7 +72,7 @@ export async function POST(request: Request) {
         price: price ? parseInt(price) : null,
         images: typeof images === 'string' ? images : JSON.stringify(images),
         category,
-        status: (status as 'DRAFT' | 'PUBLISHED') || 'DRAFT',
+        status: (status as ProductStatus) || ProductStatus.DRAFT,
         centerId,
       },
       include: {

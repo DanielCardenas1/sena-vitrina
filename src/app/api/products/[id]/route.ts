@@ -1,5 +1,6 @@
 import { prisma } from '@/lib/prisma'
 import { NextResponse } from 'next/server'
+import { ProductStatus } from '@prisma/client'
 
 export const dynamic = 'force-dynamic'
 export const revalidate = 0
@@ -58,7 +59,7 @@ export async function PATCH(
         ...(price !== undefined && { price: price ? parseInt(price) : null }),
         ...(images && { images: typeof images === 'string' ? images : JSON.stringify(images) }),
         ...(category && { category }),
-        ...(status && { status: status as 'DRAFT' | 'PUBLISHED' }),
+        ...(status && { status: status as ProductStatus }),
       },
       include: {
         center: {
